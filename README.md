@@ -1,2 +1,2 @@
-# _-COoKIe_
-10th-grade student | Aspiring Software Engineer | Self-teaching Python &amp; Web Dev. Focused on building logic-driven projects and trying to maintaining consistent growth. Learning Line by line......"
+#COOKIE.1...
+e student | Aspiring Software Engineer | Self-teaching Python &amp; Web Dev. Focused on building logic-driven projects and trying to maintaining consistent growth. Learning Line by line......"
