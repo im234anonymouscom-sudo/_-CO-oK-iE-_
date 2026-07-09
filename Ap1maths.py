@@ -1,7 +1,17 @@
 def givetheAP(x, y, z):
-    mylist = []
-    for n in range(x, y + 1):
-        if n % z == 0:
+    mylist = [rem=x%z
+    if rem==0:
+    	a=x]
+
+    else:
+    	a=x+(z-rem)
+    rem2=y%z
+    if rem2==0:
+    	l=y
+    else:
+    	l=y-rem2    
+    for n in range(a,y + 1,z):
+        
             mylist.append(n)
     return mylist
 user = input("So are you ready?? This will tell you the number that lie between x and y and are divisible by z ")
