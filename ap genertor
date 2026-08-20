@@ -1,0 +1,62 @@
+def givetheAP(x, y, z):
+    mylist = []
+    rem = x % z
+    if rem == 0:
+        a = x
+    else:
+        a = x + (z - rem)
+    rem2 = y % z
+    if rem2 == 0:
+        l = y
+    else:
+        l = y - rem2    
+    for n in range(a, l + 1, z):
+        mylist.append(n)
+    return mylist
+        
+def stats(mylist):
+    if not mylist:
+        print('no numbers found hun')
+        return 0, 0, 0, None, -1  
+    
+    length = len(mylist)
+    count = sum(mylist)
+    average = count / length
+    
+    findno = int(input("tell the no. you want to find? "))
+    
+    if findno in mylist:
+        term = mylist.index(findno) + 1
+    else:
+        print("the number is not found")
+        term = -1
+        
+    return count, length, average, findno, term
+    
+user = input("So are you ready?? This will tell you the number that lie between x and y and are divisible by z ")
+
+while True:
+    if user.capitalize() == "Yes":
+        x = int(input('tell the starting of the range: '))
+        y = int(input('tell the ending of the range: '))
+        z = int(input('tell the divisor: ')) # Terminology update: divisor
+        
+        #Added 'continue' so the script doesn't crash on the next line
+        if z == 0:
+              print("z can't be zero, baby! Let's try that again.")
+              continue 
+        
+        result = givetheAP(x, y, z)
+        count, length, average, findno, term = stats(result)
+        
+        if length > 0:
+            print(f"\nThe numbers that are divisible by {z} between {x} and {y} are {result}")
+            print(f"Total numbers: {length}")
+            print(f"Sum: {count}")
+            print(f"Average: {average}")
+            if term != -1:
+                print(f"The value {findno} is at the {term}th term.")
+        break
+    else:
+        user = input("type Yes to continue ")
+        
